@@ -54,7 +54,7 @@ B = randn(5,4);
 ```
 
 The following code then checks the dimensions of the matrices, and proceeds to multiply them if it is possible.
-The results go into a third matric called ``C``.
+The results go into a third matrix called ``C``.
 ```matlab
 if ndims(A)>2 || ndims(B)>2
     error('Arrays have too many dimensions.');
@@ -76,7 +76,7 @@ end
 ```
 
 The above is just for illustration. In practice, matrix multiplications should not be done like this in MATLAB.
-It is an interpreted language, so it is much more efficient to use builtin functions whenever possible.
+It is an interpreted language, so it is much more efficient to use built-in functions whenever possible.
 
 
 ## While
@@ -255,6 +255,9 @@ c = -5;
 x_minmax = -b/(2*a); % Value of x that gives the minimum/maximum of a quadratic
 
 plot(x, quad(x,a,b,c), '-',  [x1 x2], quad([x1 x2], a, b, c), 'ro-', x_minmax, quad(x_minmax,a,b,c),'rx')
+xlabel('x')
+ylabel('3x^2 + 4x - 5')
+title('Example Quadratic')
 ```
 
 
